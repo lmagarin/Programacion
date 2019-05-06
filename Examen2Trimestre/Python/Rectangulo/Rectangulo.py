@@ -21,9 +21,6 @@ class Rectangulo ():
     def __init__(self, ancho, alto):
         self.set_ancho(ancho)
         self.set_alto(alto)
-            
-        #except ValueError:
-            #print("ERROR: No se puede insertar esas dimensiones\n")
 
     #Propiedad para obtener el alto del rectángulo
     @property
