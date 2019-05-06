@@ -19,12 +19,11 @@ excepción y capturarla.
 class Rectangulo ():
     #Constructor
     def __init__(self, ancho, alto):
-        try:
-            self.set_ancho(ancho)
-            self.set_alto(alto)
+        self.set_ancho(ancho)
+        self.set_alto(alto)
             
-        except ValueError:
-            print("ERROR: No se puede insertar esas dimensiones\n")
+        #except ValueError:
+            #print("ERROR: No se puede insertar esas dimensiones\n")
 
     #Propiedad para obtener el alto del rectángulo
     @property
@@ -34,8 +33,10 @@ class Rectangulo ():
     #Método para modificar el alto del rectángulo
     @alto.setter
     def alto(self, alto):
+        if alto>10 or alto<1:
+            print("ERROR: No se puede insertar esas dimensiones\n")
         self.alto=alto
-        
+          
     #Propiedad para obtener el ancho del rectángulo
     @property
     def ancho(self):
@@ -44,8 +45,10 @@ class Rectangulo ():
     #Método para modificar el ancho del rectángulo
     @ancho.setter
     def ancho(self, ancho):
+        if ancho>10 or ancho<1:
+            print("ERROR: No se puede insertar esas dimensiones\n")
         self.ancho=ancho
-        
+          
     #Método para imprimir el rectángulo
     def __str__(self):
         linea = ""
