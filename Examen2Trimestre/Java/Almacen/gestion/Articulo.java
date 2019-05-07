@@ -28,7 +28,7 @@ public class Articulo {
 		setPrecioVenta(precioVenta);
 		setStock(stock);
 		this.codigo = generarCodigo();
-		this.iva=iva;
+		setIva(tipoDeIva);
 	}
 
 	/**
